@@ -1,0 +1,512 @@
+.title-page {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #EBEDFF;
+    padding: 100px 0 75px 0;
+
+    h1 {
+        font-weight: 700;
+        position: relative;
+
+        &:before {
+            content: url(../img/elements/souligne.png);
+            position: absolute;
+            left: 0%;
+            top: 30px;
+        }
+
+        &:after {
+            content: url(../img/elements/traits.png);
+            position: absolute;
+            top: -60px;
+            left: 20px;
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.hero-banner {
+    margin: 30px 4%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .content {
+        h3 {
+            color: #4D64FF;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-weight: 700;
+        }
+
+        p {
+            margin: 40px 0 60px;
+        }
+    }
+
+
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .element {
+            img {
+                width: 100px;
+            }
+
+            h5 {
+                margin: 0;
+                color: #000;
+            }
+
+            p {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .img {
+        margin: 50px 0;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.bandeau {
+    margin: 0 6%;
+    padding: 4rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4D64FF;
+    color: #fff;
+
+    text-align: center;
+
+    h1 {
+        color: #fff;
+        position: relative;
+
+        &:before {
+            content: url(../img/elements/souligne3.png);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+        }
+
+        &:after {
+            content: url(../img/elements/traits3.png);
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    p {
+        margin: 3rem 0;
+    }
+}
+
+.faq {
+    background-color: #EBEDFF;
+    margin: 40px 6%;
+    padding: 4rem 1rem;
+    border-radius: 8px;
+
+    h1 {
+        position: relative;
+        text-align: center;
+
+        &:before {
+            content: url(../img/elements/souligne.png);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) scale(0.5);
+            top: 20px;
+        }
+
+        &:after {
+            content: url(../img/elements/traits.png);
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .accordion-item {
+            border-bottom: 1px solid #e5e5e5;
+            background-color: #CED5FF;
+            padding: 10px;
+
+            button[aria-expanded='true'] {
+                border-bottom: 1px solid #181112;
+            }
+        }
+
+        button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1rem 2rem 1rem 1rem;
+            color: #000;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                color: #000;
+
+                &::after {
+                    cursor: pointer;
+                    color: #000;
+                    border: 1px solid #000;
+                }
+            }
+
+            .accordion-title {
+                padding: 1em 1.5em 1em 0;
+                font-weight: 500;
+            }
+
+            .icon {
+                display: inline-block;
+                position: absolute;
+                top: 18px;
+                right: 0;
+                width: 22px;
+                height: 22px;
+                border: none;
+                border-radius: 22px;
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    top: 9px;
+                    left: 5px;
+                    width: 10px;
+                    height: 2px;
+                    background: currentColor;
+                }
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    top: 5px;
+                    left: 9px;
+                    width: 2px;
+                    height: 10px;
+                    background: currentColor;
+                }
+            }
+        }
+
+        button[aria-expanded='true'] {
+            color: #000;
+
+            .icon {
+                &::after {
+                    width: 0;
+                }
+            }
+
+            +.accordion-content {
+                opacity: 1;
+                max-height: 999em;
+                transition: all 200ms linear;
+                will-change: opacity, max-height;
+            }
+        }
+
+        .accordion-content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                margin: 2em 1rem;
+            }
+        }
+    }
+}
+
+
+.contact {
+    padding: 50px 8%;
+    display: flex;
+    flex-direction: column;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 50px;
+    
+            &:before {
+                content: url(../img/elements/souligne.png);
+                position: absolute;
+                left: 20px;
+                top: 20px;
+            }
+    
+            &:after {
+                content: url(../img/elements/traits2.png);
+                position: absolute;
+                top: -70px;
+                left: 160px;
+                transform: rotate(30deg) scale(0.5);
+            }
+        }
+    }
+    
+
+    #confirmation-message {
+        margin-bottom: 20px;
+    }
+
+    form {
+        margin: 0 auto;
+
+        ::placeholder {
+            color: #99A7FF;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #99A7FF;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #4D64FF;
+            border-radius: 4px;
+        }
+
+        button {
+            border: none;
+        }
+
+        textarea {
+            height: 150px;
+        }
+    }
+
+    img {
+        display: none;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .reseaux {
+        display: flex;
+        gap: 20px;
+
+        .social {
+            cursor: pointer;
+            background-color: transparent;
+            padding: 12px;
+            border-radius: 4px;
+            border: 2px solid #4D64FF;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #4D64FF;
+                transition: all 0.3s;
+
+                .fa-brands {
+                    color: #fff;
+                }
+            }
+
+            .fa-brands {
+                transform: scale(1.5);
+                color: #4D64FF;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .hero-banner {
+        margin: 0;
+        padding: 50px 6%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .title-page {
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+        background-color: #EBEDFF;
+        padding: 100px 8%;
+
+        h1 {
+            font-weight: 700;
+            position: relative;
+            font-size: 3rem;
+
+            &:before {
+                content: url(../img/elements/souligne.png);
+                position: absolute;
+                left: 0%;
+                top: 30px;
+            }
+
+            &:after {
+                content: url(../img/elements/traits2.png);
+                position: absolute;
+                top: -80px;
+                left: 160px;
+                transform: rotate(30deg) scale(0.7);
+            }
+        }
+    }
+
+    .hero-banner {
+        padding-top: 0;
+        align-items: center;
+        flex-direction: row;
+        text-align: left;
+        gap: 7%;
+
+        .content {
+            flex: 60%;
+
+            .flexbox {
+                flex-direction: row;
+            }
+        }
+
+        .img {
+            flex: 40%;
+
+            img {
+                margin-top: -25%;
+                z-index: 999;
+            }
+        }
+    }
+
+    .bandeau {
+        margin: 2rem 6%;
+        flex-direction: row;
+        text-align: left;
+        padding: 2rem 6rem 1rem 6rem;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 70%;
+
+
+            h1 {
+                color: #fff;
+                position: relative;
+                margin: 2rem 0 0;
+
+                &:before {
+                    content: url(../img/elements/souligne3.png);
+                    position: absolute;
+                    left: 50%;
+                    top: 20px;
+                }
+
+                &:after {
+                    content: url(../img/elements/traits3.png);
+                    position: absolute;
+                    top: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+
+        .CTA {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 30%;
+        }
+    }
+
+
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 4rem 6rem;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+
+        .content{
+            align-items: flex-start;
+            flex: 60%;
+        }
+        img{
+            display: block;
+            flex: 40%;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+    .title-page, .hero-banner, .bandeau, .faq, .contact {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+}

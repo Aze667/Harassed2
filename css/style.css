@@ -1,0 +1,463 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-banner {
+    margin: 75px 20px;
+    text-align: center;
+
+    .content {
+
+        h1,
+        p {
+            margin: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .img {
+        display: none;
+    }
+}
+
+.a-propos {
+    text-align: center;
+    padding: 75px 8% 50px;
+    background-color: #EBEDFF;
+
+    h1 {
+        font-weight: 700;
+        position: relative;
+
+        &:before {
+            content: url(../img/elements/souligne.png);
+            position: absolute;
+            left: 25%;
+            top: 20px;
+        }
+
+        &:after {
+            content: url(../img/elements/traits.png);
+            position: absolute;
+            top: -50px;
+            left: 40px;
+            transform: rotate(-30deg);
+        }
+    }
+
+    h3 {
+        margin: 40px 0;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.recommandations {
+    background-color: #99A7FF;
+    padding: 50px 8% 50px;
+    text-align: center;
+
+    .content{
+        #buttonDesktop{
+            display: none;
+        }
+    }
+    h2 {
+        margin: 0;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+
+        a{
+            text-decoration: none;
+            color: #000;
+
+            .card {
+                background-color: #fff;
+                border-radius: 8px;
+                padding: 50px;
+                transition: all 0.2s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &:hover{
+                    background-color: #EBEDFF;
+                    transition: all 0.2s;
+                }
+    
+                h3 {
+                    font-weight: 700;
+                    position: relative;
+                }
+            }
+        }
+        
+
+        #reco4 {
+            display: none;
+        }
+        #buttonMobile{
+            display: block;
+        }
+    }
+}
+
+.chiffres {
+    padding: 30px 8% 30px;
+    text-align: center;
+
+    h1 {
+        color: #99A7FF;
+        font-weight: 600;
+    }
+
+    .card2 {
+        margin: 60px 0;
+
+        h1,
+        h5,
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            color: #4D64FF;
+            margin: 10px 0;
+        }
+    }
+    hr{
+        width: 75%;
+    }
+}
+
+.contact {
+    padding: 0px 8% 50px;
+
+    h1 {
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 50px;
+
+        &:before {
+            content: url(../img/elements/souligne.png);
+            position: absolute;
+            left: 25%;
+            top: 20px;
+        }
+
+        &:after {
+            content: url(../img/elements/traits2.png);
+            position: absolute;
+            top: -80px;
+            left: -60px;
+            transform: rotate(-30deg);
+        }
+    }
+
+    #confirmation-message {
+        margin-bottom: 20px;
+    }
+
+    form {
+        margin: 0 auto;
+
+        ::placeholder {
+            color: #99A7FF;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #99A7FF;
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #4D64FF;
+            border-radius: 4px;
+        }
+
+        button {
+            border: none;
+        }
+
+        textarea {
+            height: 150px;
+        }
+    }
+
+    img {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .reseaux {
+        display: flex;
+        gap: 20px;
+
+        .social {
+            background-color: transparent;
+            padding: 12px;
+            border-radius: 4px;
+            border: 2px solid #4D64FF;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #4D64FF;
+                transition: all 0.3s;
+
+                .fa-brands {
+                    color: #fff;
+                }
+            }
+
+            .fa-brands {
+                transform: scale(1.5);
+                color: #4D64FF;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .a-propos {
+        text-align: left;
+
+        h1 {
+            font-weight: 700;
+            position: relative;
+
+            &:before {
+                content: url(../img/elements/souligne.png);
+                position: absolute;
+                left: 0;
+                top: 20px;
+            }
+
+            &:after {
+                content: url(../img/elements/traits.png);
+                position: absolute;
+                top: -50px;
+                left: -50px;
+                transform: rotate(-30deg);
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .recommandations {
+        .grid {
+            .card {
+                padding: 50px 80px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        gap: 50px;
+    }
+
+    .contact {
+        h1 {
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 50px;
+
+            &:before {
+                content: url(../img/elements/souligne.png);
+                position: absolute;
+                left: 10%;
+                top: 20px;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .hero-banner {
+        padding: 75px 8% 0px;
+        margin-top: 0;
+        display: flex;
+        text-align: left;
+        margin-bottom: -55px;
+        align-items: center;
+
+        .content {
+            flex: 50%;
+
+            h1,
+            p {
+                margin: 30px 0;
+            }
+
+            .buttons {
+                justify-content: flex-start;
+                gap: 20px;
+            }
+        }
+
+        .img {
+            flex: 50%;
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .background {
+        background-image: url(../img/background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        
+        .a-propos {
+            background-color: transparent;
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 75px 8% 50px 2%;
+            align-items: center;
+
+            .content {
+                flex: 50%;
+            }
+
+            img {
+                flex: 50%;
+                width: 150%;
+            }
+        }
+
+        .recommandations {
+            padding: 50px 0 50px 8%;
+            margin-left: 150px;
+            border-bottom-left-radius: 24px;
+            border-top-left-radius: 24px;
+
+            .content{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-right: 75px;
+
+                #buttonDesktop{
+                    display: block;
+                }
+            }
+
+            .grid {
+                display: grid;
+                gap: 13%;
+                margin-bottom: 50px;
+                grid-template-columns: repeat(4, 1fr);
+                overflow-x: scroll;
+
+                #reco4 {
+                    display: block;
+                }
+
+                .card {
+                    background-color: #fff;
+                    border-radius: 8px;
+                    padding: 50px 30px;
+                    width: calc(100% + 50px);
+                    text-align: left;
+                    height: 250px;
+                }
+            }
+            #buttonMobile{
+                display: none;
+            }
+        }
+
+        .chiffres {
+            padding: 120px 8% 50px;
+            text-align: center;
+        
+            #titleChiffres {
+                color: #99A7FF;
+                font-weight: 600;
+                text-align: left;
+                margin-right: 50%;
+            }
+
+            .flexbox{
+                display: flex;
+                gap: 50px;
+                align-items: center;
+
+                hr{
+                    height:300px;
+                    width:auto;
+                }
+
+                .card2{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                }
+            }
+            
+        }
+    }
+
+    .contact{
+        padding: 50px 12%;
+        display: flex;
+        align-items: center;
+        gap: 150px;
+
+        .content {
+            flex: 60%;
+        }
+
+        img{
+            display: block;
+            flex: 40%;
+            width: 100%;
+        }
+    }
+}
